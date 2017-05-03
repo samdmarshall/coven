@@ -19,9 +19,7 @@ proc execCallback(index: int, process: Process): void {.gcsafe.} =
   var output_file: File
   discard open(output_file, output_handle, fmRead)
   let output = output_file.readAll().string
-  var lines = output.split("\n")
-  lines.keepIf(proc(x: string): bool = len(x) > 0)
-  if len(lines) == 0:
+  if len(output) == 0:
     status[index] = ""
 
 # ===========
