@@ -52,8 +52,8 @@ for kind, key, value in getopt():
     case key:
     of "help", "h":
       echo()
-    of "--version", "-v":
-      echo("coven v0.1")
+    of "version", "v":
+      echo("coven v0.1.0")
     else:
       discard
   else:
